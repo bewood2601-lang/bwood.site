@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>בהא אומנות בעץ | עבודות נגרות, ריהוט גן וסדנאות עץ</title>
+    <title>בהא אומנות בעץ | המוצרים שלנו</title>
     
-    <meta name="description" content="בהא אומנות בעץ - מומחים בעבודות נגרות בהתאמה אישית, עיצוב ריהוט גן איכותי וסדנאות עץ חווייתיות. שירות מקצועי, יחס אישי וגימור מושלם. צרו קשר עוד היום לייעוץ וקבלת הצעת מחיר!">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon32.png" sizes="32x32">
 </head>
 <body>
 
-<div id="lightbox" class="lightbox">
-    <span class="close-lightbox">&times;</span>
-    <div id="lightbox-content" class="lightbox-gallery"></div>
-</div>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<body>
 
 <nav>
     <div class="nav-left">
@@ -29,11 +31,10 @@
     </div>
     
     <div class="nav-links" id="navLinks">
-        <a href="#home">בית</a>
-        <a href="#shop">מוצרים</a>
-        <a href="#school"> גפן</a> 
-        <a href="#about">אודות</a>
-        <a href="#testimonials">דעות</a>
+<a href="index.html#home">בית</a>	
+<a href="shop.html">מוצרים</a>
+<a href="gefen.html">גפן</a>
+<a href="about.html">אודות</a>
     </div>
 
     <div class="nav-right">
@@ -65,144 +66,48 @@
 </div>
 </nav>
 
-<main>
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>בהא אומנות בעץ</h1>
-            <h2>איכות ללא פשרות | שירות אישי | מחיר הוגן</h2>
-        </div>
-    </section>
-
-    <section id="shop">
-        <h2>המוצרים שלנו</h2>
-        <div class="product-grid"></div>
-    </section>
-
-
-
-
-
-<section id="school" class="about-section">
-    <h2>תוכנית "קוד גפן" - סדנאות עץ</h2>
-    
-    <div class="gallery-container">
-        <div class="program-gallery" id="gefen-gallery">
-            <img src="images/g6.jpg" alt="קוד גפן 1">
-            <img src="images/g5.jpg" alt="קוד גפן 2">
-            <img src="images/g4.jpg" alt="קוד גפן 3">
-            <img src="images/g8.jpg" alt="קוד גפן 4">
-            <img src="images/g9.jpg" alt="קוד גפן 5">
-        </div>
-        
-        <div class="gallery-controls">
-            <button onclick="scrollGallery(-1)">&#10094;</button>
-            <button onclick="scrollGallery(1)">&#10095;</button>
-        </div>
+<section id="home" class="hero">   
+</section>
+<section id="about-brief" class="about-brief">
+ <div class="hero-content">
+        <a href="shop.html" class="btn-primary">צפה במוצרים שלנו</a>
     </div>
-
-    <div style="text-align: right; line-height: 1.8; margin-top: 20px; padding: 0 15px;">
-        <p><strong>אודות התוכנית:</strong> סדרת מפגשים חווייתיים בעולם העץ (מספר תוכנית: 31172). בואו לצאת למסע יצירתי שבו העץ הופך מיצירה גולמית לרהיט או אובייקט עם נשמה. אנו מזמינים את התלמידים להתנתק מהמסכים ולהתחבר לעשייה מוחשית, מדויקת ומלאת סיפוק.</p>
-        
-        <p><strong>מטרות התוכנית:</strong></p>
-        <ul>
-            <li><strong>פיתוח מוטוריקה עדינה:</strong> שימוש בכלי עבודה ידניים ומכניים לחיזוק הקואורדינציה.</li>
-            <li><strong>חשיבה יצירתית:</strong> למידה כיצד לקחת רעיון מהדמיון ולהפוך אותו לתוכנית עבודה מוגדרת.</li>
-            <li><strong>סבלנות והתמדה:</strong> התלמידים לומדים ליהנות משלבי התכנון, החיתוך, השיוף והגימור.</li>
-            <li><strong>עבודה בצוות:</strong> למידה משותפת, עזרה הדדית ופתרון בעיות בסביבת עבודה בטוחה.</li>
-        </ul>
-
-        <p><em>"יצירה בעץ היא שפה. היא מאפשרת לתלמידים לבטא את עצמם, לפתח ביטחון עצמי ולראות איך בעשר אצבעות הם בוראים מציאות חדשה."</em></p>
-
-        <div style="margin-top: 25px; text-align: center;">
-            <a href="https://wa.me/972503690284?text=שלום, אני מעוניין לקבל פרטים נוספים על תוכנית קוד גפן (31172)" 
-               class="buy-btn" style="display: inline-block; padding: 10px 20px; text-decoration: none; background-color: #27ae60; color: white; border-radius: 5px; font-weight: bold;">לפרטים על התוכנית בווטסאפ</a>
-        </div>
-    </div>
-</section>    
-
-
-<section id="about" class="about-section">
-        <h2>קצת עלינו</h2>
-        <div style="text-align: right; line-height: 1.8; color: #333; font-size: 1.1rem;">
-            <p><strong>הסיפור שלנו:</strong> ב-בהא אומנות בעץ, אנחנו מאמינים שעץ הוא לא רק חומר גלם – הוא הנשמה של הבית והגינה. מאז הקמתנו, שמנו לעצמנו למטרה להכניס את הטבע, החמימות והיופי של העץ לכל מרחב מגורים.</p>
-            <details style="cursor: pointer;">
-                <summary style="font-weight: bold; color: #d35400; padding: 10px 0;">למידע נוסף עלינו...</summary>
-                <p><strong>האיכות שלנו:</strong> אנו מתמחים בתכנון ועיצוב ריהוט גן איכותי מעץ טבעי ומלא. כל פריט עובר תהליכי עיבוד קפדניים להבטחת עמידות לאורך שנים.</p>
-                <p><strong>למה לבחור בנו?</strong></p>
-                <ul>
-                    <li><strong>ניסיון ומקצועיות:</strong> מומחים בעבודה עם סוגי עץ איכותיים.</li>
-                    <li><strong>עיצוב אישי:</strong> שילוב טכניקות מסורתיות עם עיצוב מודרני.</li>
-                    <li><strong>שירות מכל הלב:</strong> ליווי אישי מהייעוץ ועד להצבה בגינה.</li>
-                </ul>
-            </details>
-        </div>
-    </section>
-
-
-
-
-
-<section id="testimonials">
-    <h2>מה הלקוחות שלנו אומרים</h2>
-    <div class="product-grid" id="testimonials-grid">
-        
-        <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"הריהוט הגיע בדיוק בזמן, האיכות מדהימה!"</p>
-            <strong>- משפחת כהן</strong>
-        </div>
-        <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"מאוד נאמנים ואדיבים, תודה רבה!"</p>
-            <strong>- דליה שוארץ</strong>
-        </div>
-        <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"העץ איכותי מאוד ומרגיש עמיד!"</p>
-            <strong>- שרה אברהם</strong>
-        </div>
-        <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"שירות מצוין, הסט נראה מעולה בגינה."</p>
-            <strong>- דני לוי</strong>
-        </div>
-
-        <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"עיצוב מרהיב, מרגישים את ההשקעה בכל פרט ופרט."</p>
-            <strong>- יוסי מזרחי</strong>
-        </div>
-        <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"שירות אדיב וסבלני, בהחלט נחזור שוב!"</p>
-            <strong>- משפחת אבו-סאלח</strong>
-        </div>
-        <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"הגינה שלנו קיבלה חיים חדשים בזכות הרהיטים שלכם."</p>
-            <strong>- עינת כהן</strong>
-        </div>
-        <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"שירות מעל ומעבר, בהחלט אומן בנשמה."</p>
-            <strong>- משפחת לוי</strong>
-        </div>
-    </div>
-    
-    <div style="text-align: center; margin-top: 30px;">
-        <button id="toggleBtn" onclick="toggleTestimonials()" class="buy-btn">הצג עוד</button>
+    <div class="container">
+        <h2> בהא אומנות בעץ</h2>
+        <p>
+            אנחנו מאמינים שכל פריט עץ מספר סיפור. עם שנים של ניסיון בתחום הנגרות ועיצוב ריהוט גן, 
+            אנו משלבים טכניקות מסורתיות עם עיצוב מודרני כדי ליצור עבורכם חללים חיצוניים חלומיים. 
+            כל מוצר שיוצא מהנגרייה שלנו עובר בקרת איכות קפדנית, תוך דגש על עמידות, נוחות ואסתטיקה ללא פשרות. 
+            המטרה שלנו היא להפוך את הגינה שלכם למקום שפשוט כיף לשהות בו.
+        </p>
     </div>
 </section>
 
-</main>
-
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="backToTopBtn" title="חזור למעלה">▲</button>
+<section class="features-section">
+    <div class="features-container">
+        <div class="feature-item">
+            <i class="fas fa-gem"></i>
+            <h3>איכות</h3>
+            <p>שימוש בחומרי גלם איכותיים ועמידים לאורך שנים.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-headset"></i>
+            <h3>שירות</h3>
+            <p>ליווי אישי ומקצועי מרגע התכנון ועד לתוצאה המושלמת.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-tag"></i>
+            <h3>מחיר</h3>
+            <p>התאמה אישית של פתרונות עיצוב במחירים הוגנים ותחרותיים.</p>
+        </div>
+    </div>
+</section>
 
 <footer>
     <div class="footer-content">
         <div class="footer-section">
             <h3>בהא אומנות בעץ</h3>
-           <h2> המומחים לעיצוב ריהוט גן איכותי</h2>
+            <h2>המומחים לעיצוב ריהוט גן איכותי</h2>
         </div>
         
         <div class="footer-section">
@@ -217,233 +122,28 @@
             </div>
         </div>
 
-
-     <div class="footer-section">
-                <h3>צור קשר</h3>
-                <a href="tel:0503690284" class="contact-link"><i class="fas fa-phone"></i> 050-3690284</a>
-                <a href="mailto:contact@bewood.co.il" class="contact-link"><i class="fas fa-envelope"></i> contact@bewood.co.il</a>
-            </div>
+        <div class="footer-section">
+            <h3>צור קשר</h3>
+            <a href="tel:0503690284" class="contact-link"><i class="fas fa-phone"></i> 050-3690284</a>
+            <a href="mailto:contact@bewood.co.il" class="contact-link"><i class="fas fa-envelope"></i> contact@bewood.co.il</a>
         </div>
+    </div>
  
     <div class="footer-bottom">
         &copy; 2026 כל הזכויות שמורות ל-בהא אומנות בעץ
     </div>
 </footer>
 
-<script>
-function scrollGallery(direction) {
-    const gallery = document.getElementById('gefen-gallery');
-    const scrollAmount = 260; // عرض الصورة + الـ gap
-    gallery.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-    });
-}
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const gallery = document.querySelector('.program-gallery');
-    
-    // وظيفة التنقل عند الضغط على الأزرار
-    window.scrollGallery = (direction) => {
-        const scrollAmount = 300; // مقدار التمرير
-        gallery.scrollBy({
-            left: direction * scrollAmount,
-            behavior: 'smooth'
-        });
-    };
-});
-</script>
-
-<script>
-const products = [
-  {
-    id: 1,
-    name: "סט ישיבה קלאסי",
-    price: 0,
-    images: ["images/0.jpg", "images/1.jpg", "images/s2.jpg", "images/s3.jpg", "images/s4.jpg", "images/s5.jpg", "images/s6.jpg", "images/s7.jpg", "images/s8.jpg", "images/s9.jpg", "images/s10.jpg", "images/s11.jpg"]
-  },
-  {
-    id: 2,
-    name: "אדניות לפי מידה",
-    price: 0,
-    images: ["images/a.jpg", "images/a1.jpg", "images/a2.jpg", "images/a3.jpg", "images/a4.jpg"]
-  },
-  {
-    id: 3,
-    name: "קקלים לפי מידה",
-    price: 0,
-    images: ["images/p.jpg", "images/p1.jpg", "images/p2.jpg", "images/p3.jpg", "images/p4.jpg", "images/p5.jpg"]
-  },
-  {
-    id: 4,
-    name: "נדנדות",
-    price: 0,
-    images: ["images/m1.jpg", "images/m2.jpg", "images/m3.jpg", "images/m4.jpg"]
-  }
-];
-
-const grid = document.querySelector('#shop .product-grid');
-const lightbox = document.getElementById('lightbox');
-const closeBtn = document.querySelector('.close-lightbox');
-const lightboxContent = document.getElementById('lightbox-content');
-
-// יצירת הכרטיסים
-products.forEach(product => {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-// تعديل الـ innerHTML ليشمل حاوية للصورة والأيقونة
-    card.innerHTML = `
-        <div class="product-image-container">
-            <img src="${product.images[0]}" class="product-img" style="cursor:pointer; width:100%;">
-            <div class="zoom-overlay-icon"><i class="fas fa-images"></i></div>
-        </div>
-        <h3>${product.name}</h3>
-        <button class="buy-btn">לנציג</button>
-    `;
-
-    // פתיחת Lightbox בלחיצה על תמונה
-    card.querySelector('.product-img').onclick = () => {
-        lightbox.style.display = "flex";
-        document.body.style.overflow = 'hidden';
-        lightboxContent.innerHTML = ""; 
-
-        const mainImg = document.createElement('img');
-        mainImg.src = product.images[0];
-        mainImg.className = 'main-zoomed-img';
-        lightboxContent.appendChild(mainImg);
-
-        const agentBtn = document.createElement('button');
-        agentBtn.className = 'agent-btn';
-        agentBtn.innerText = 'לנציג';
-        agentBtn.onclick = () => window.open(`https://wa.me/972503690284?text=שלום, מעוניין ב-${product.name}`);
-        lightboxContent.appendChild(agentBtn);
-
-        const filmstrip = document.createElement('div');
-        filmstrip.className = 'filmstrip-container';
-
-        product.images.forEach((imgSrc) => {
-            const thumb = document.createElement('img');
-            thumb.src = imgSrc;
-            thumb.className = 'thumb';
-            thumb.onclick = (e) => {
-                e.stopPropagation();
-                mainImg.src = imgSrc;
-                lightboxContent.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
-            };
-            filmstrip.appendChild(thumb);
-        });
-        lightboxContent.appendChild(filmstrip);
-    };
-
-    // כפתור "לנציג" בכרטיס
-    card.querySelector('.buy-btn').onclick = () => {
-        window.open(`https://wa.me/972503690284?text=שלום, מעוניין ב-${product.name}`);
-    };
-
-    grid.appendChild(card);
-});
-
-// סגירת Lightbox
-const closeModal = () => {
-    lightbox.style.display = "none";
-    document.body.style.overflow = '';
-};
-
-closeBtn.onclick = closeModal;
-lightbox.onclick = (e) => { if(e.target === lightbox) closeModal(); };
-
-// תמיכה ב-Escape לסגירה
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-});
-
-// כפתור חזור למעלה
-window.onscroll = () => {
-    const btn = document.getElementById("backToTopBtn");
-    if (btn) {
-        btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
-    }
-};
-</script>
 
 
-<script>
-function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
-}
-
-// בונוס: סגירת התפריט אוטומטית כשלוחצים על קישור
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById("navLinks").classList.remove("active");
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // تحديد الصور في قسم المعرض
-    const galleryImages = document.querySelectorAll('.program-gallery img');
-
-    // إزالة خاصية التكبير
-    galleryImages.forEach(img => {
-        img.style.cursor = "default"; // إرجاع شكل الفأرة للطبيعي
-        img.onclick = null; // إلغاء وظيفة الضغط تماماً
-    });
-});
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="backToTopBtn" title="חזור למעלה">▲</button>
 
 
-function toggleAbout() {
-    const content = document.getElementById("more-content");
-    const btn = document.getElementById("show-more-btn");
-    
-    content.classList.toggle("active");
-    
-    if (content.classList.contains("active")) {
-        btn.innerText = "הצג פחות";
-    } else {
-        btn.innerText = "קרא עוד...";
-    }
-}
 
 
-</script>
 
-<script>
-function toggleTestimonial(btn) {
-    const card = btn.parentElement;
-    const text = card.querySelector('.text-content');
-    
-    text.classList.toggle('expanded');
-    
-    if (text.classList.contains('expanded')) {
-        btn.innerText = "קרא פחות";
-    } else {
-        btn.innerText = "קרא עוד...";
-    }
-}
-</script>
-<script>
-function toggleTestimonials() {
-    const hiddenCards = document.querySelectorAll('.hidden-card');
-    const btn = document.getElementById('toggleBtn');
-    
-    // בודקים אם הכרטיס הראשון מוסתר
-    const isHidden = hiddenCards[0].style.display === 'none' || hiddenCards[0].style.display === '';
 
-    hiddenCards.forEach(card => {
-        card.style.display = isHidden ? 'flex' : 'none';
-    });
-
-    // שינוי טקסט הכפתור
-    btn.innerText = isHidden ? 'הצג פחות' : 'הצג עוד';
-}
-
-</script>
-
+<script src="products.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

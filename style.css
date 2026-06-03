@@ -1,13 +1,13 @@
 /* --- إعدادات أساسية --- */
 html { scroll-behavior: smooth; }
 body {
-    margin: 0;
+  /*  margin: 0;*/
     min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
-    border: 25px solid;
+   /* border: 25px solid;*/
     border-image: linear-gradient(to bottom, #ffffff, #c9c0b3) 30;
-    background: linear-gradient(#ffffff 50%, #c9c0b3 53%) fixed;
+    background: linear-gradient(#ffffff 50%, #c9c0b3 90%) fixed;
     padding-top: 10px;
 }
 
@@ -15,20 +15,21 @@ body {
 /* --- תפריט ניווט עליון --- */
 
 nav {
- 
+ right:0;
+left:0;
     display: flex;
     justify-content: space-between; /* هذا سيوزع العناصر الثلاثة (يمين، وسط، يسار) */
     align-items: center;
     padding: 0 0; /* تقليل الـ padding */
-    height: 70px;
+    height: 75px;
     background: #2c3e50;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-      left: 25px;     /* نفس عرض الإطار الأيسر */
-     right: 25px;    /* نفس عرض الإطار الأيمن */
-    width: calc(100% - 50px); /* عرض الصفحة ناقص عرض الإطار من الجهتين */
+    /*  left: 25px;     /* نفس عرض الإطار الأيسر */*/
+     /*right: 25px;    /* نفس عرض الإطار الأيمن */*/
+    /*width: calc(100% - 50px); /* عرض الصفحة ناقص عرض الإطار من الجهتين */*/
 
 }
 
@@ -153,22 +154,22 @@ main { padding: 0px; }
 
 section { padding: 40px 0; text-align: center; }
 
-
+ 
 /* --- Hero Section --- */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/new-hero.png");
+    /* الحفاظ على الخلفية */
+    background-image: url("images/new-hero.png");
     background-size: cover;
     background-position: center;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* تغيير التوسيط إلى الأعلى */
     align-items: center;
     color: white;
-    border-radius: 15px;
-    margin-bottom: 40px;
-}
-.hero:hover {
+    padding-top: 50px; /* إضافة مساحة علوية ليبدأ النص من الأعلى قليلاً */
+  /*  margin-top: 75px;*/ 
+}.hero:hover {
 
     transform: scale(1);
 
@@ -176,8 +177,12 @@ section { padding: 40px 0; text-align: center; }
 
 
 
-.hero h1 { color: white; font-size: 3rem; }
-
+.hero h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-top: 20px; /* التحكم الدقيق بالمسافة من أعلى الـ Hero */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* جعل النص مقروءاً بوضوح فوق الصورة */
+}
 .hero h2 { color: #ecf0f1; font-size: 1.5rem; }
 
 
@@ -220,9 +225,9 @@ section {
 /* --- אודות וטקסטים --- */
 .about-section {
     background-color: #ffffff;
-    border: 5px double #2c3e50;
+  /*  border: 5px double #2c3e50;*/
     border-radius: 15px;
-    padding: 30px;
+    /*padding: 30px;*/
     margin: 40px auto;
     max-width: 800px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -999,7 +1004,7 @@ color: #ff6600 !important;
 @media (max-width: 768px) {
 body {
 
-border: 5px solid #ffe4c4;
+/* border: 5px solid #ffe4c4;*/
 
 
     }
@@ -1059,4 +1064,244 @@ img { content-visibility: auto; }
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.3); /* إطار خفيف لزيادة الوضوح */
+}
+
+
+/* تنسيق الموبايل */
+@media (max-width: 768px) {
+    .hero {
+background-image: url("images/new-hero-mobile.png");
+
+        height: 300px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* تنسيق زر الـ Hero */
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #27ae60; /* اللون الأخضر المميز */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    border: 2px solid white;
+}
+
+.hero-btn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05); /* تأثير تكبير بسيط عند المرور */
+    color: white;
+}
+
+.features-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* --- تعديلات لقسم الميزات --- */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* تجبر العناصر على الظهور في 3 أعمدة */
+    gap: 15px; /* تقليل المسافات قليلاً لتناسب الموبايل */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.feature-item {
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #27ae60; /* اللون الأخضر */
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+
+/* --- تعديل خاص للموبايل --- */
+@media (max-width: 768px) {
+    .features-container {
+        grid-template-columns: repeat(3, 1fr); /* الحفاظ على 3 أعمدة بجانب بعضها */
+    }
+
+    .feature-item i {
+        font-size: 1.8rem; /* تصغير حجم الأيقونات قليلاً لتناسب الموبايل */
+    }
+
+    .feature-item h3 {
+        font-size: 0.9rem; /* تصغير الخط لكي لا ينكسر السطر */
+    }
+
+    .feature-item p {
+        font-size: 0.7rem; /* تصغير النص الفرعي */
+    }
+}
+@media (max-width: 768px) {
+    /* إخفاء الفقرات النصية في الموبايل */
+    .feature-item p {
+        display: none !important;
+    }
+    
+    /* ضبط حجم الأيقونات والعناوين لتكون أكثر تناسقاً بعد إخفاء النص */
+    .feature-item {
+        padding: 10px 5px !important;
+    }
+    
+    .feature-item i {
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+.about-brief {
+    padding: 0px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    direction: rtl;
+}
+
+.about-brief .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-brief h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-brief p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* تنسيق متجاوب للموبايل */
+@media (max-width: 768px) {
+    .about-brief h2 {
+        font-size: 1.5rem;
+    }
+    .about-brief p {
+        font-size: 1rem;
+    }
+}
+/* إضافة خط أخضر تحت العنوان */
+/*.about-brief h2 {
+    color: #2c3e50;
+    margin-bottom: 25px; /* زيادة المسافة قليلاً بين العنوان والخط */
+    padding-bottom: 10px; /* مسافة بين النص والخط */
+    display: inline-block; /* لجعل الخط بعرض النص فقط */
+    border-bottom: 3px solid #27ae60; /* الخط الأخضر */
+}*/
+#school h2 {
+    display: inline-block; /* لجعل الخط بعرض النص فقط */
+    border-bottom: 3px solid #27ae60; /* اللون الأخضر وسمك الخط */
+    padding-bottom: 5px; /* مسافة بسيطة بين النص والخط */
+    margin-bottom: 20px; /* مسافة بين العنوان وما تحته */
+}
+
+
+
+
+/* تأثير عند مرور الفأرة (اختياري) */
+section h2:hover {
+    border-color: #27ae60;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.1);
+}
+
+
+/* אם תרצה להשאיר רק את הלימון הירוק מתחת (העיצוב הנקי) */
+/* إزالة الخط الأخضر من عنوان الـ hero فقط */
+
+
+/* --- تنسيق عام لجميع عناوين الأقسام --- */
+section h2 {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    display: block;
+    color: #2c3e50;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* إضافة الخط الأخضر لجميع عناوين الأقسام */
+section h2::after {
+    content: ""; 
+    display: block; 
+    width: 60px; 
+    height: 3px; 
+    background-color: #27ae60; 
+    margin: 15px auto;
+}
+/* إزالة الخط الأخضر من الـ Hero فقط */
+.hero h2::after {
+    display: none !important;
+}
+
+/* حاوية الأزرار لتنسيقها بجانب بعضها */
+.hero-buttons {
+    display: flex;
+    gap: 15px; /* مسافة بين الزرين */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* تنسيق إضافي لزر "צור קשר" ليكون مميزاً */
+.contact-btn {
+    background-color: #34495e !important; /* لون مختلف عن زر المنتجات */
+    border: 2px solid white !important;
+}
+
+.contact-btn:hover {
+    background-color: #2c3e50 !important;
+}
+
+/* تعديل بسيط لضمان ظهورهم بشكل جيد في الموبايل */
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column; /* جعل الأزرار فوق بعضها في الشاشات الصغيرة جداً */
+        gap: 10px;
+    }
+}
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #d35400; /* يمكنك تغيير اللون حسب هوية علامتك التجارية */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    transform: scale(1.05); /* تأثير تكبير بسيط عند التمرير */
 }
