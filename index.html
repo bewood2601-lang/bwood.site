@@ -516,7 +516,20 @@ function toggleTestimonials() {
     // שינוי טקסט הכפתור
     btn.innerText = isHidden ? 'הצג פחות' : 'הצג עוד';
 }
+document.addEventListener('click', function(e){
 
+    const menu = document.getElementById('navLinks');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if(
+        menu.classList.contains('active') &&
+        !menu.contains(e.target) &&
+        !toggle.contains(e.target)
+    ){
+        menu.classList.remove('active');
+    }
+
+});
 </script>
 <div class="social-side-bar">
     <a href="https://wa.me/972503690284" class="social-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
