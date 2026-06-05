@@ -49,6 +49,10 @@ nav {
 
 
 
+
+
+
+
 .nav-right {
 
     justify-content: center; /* هذا سيدفع الأيقونات لأقصى اليسار */
@@ -249,17 +253,55 @@ section {
     text-align: center;
     direction: rtl;
 }
-h1, h2 {
-     color: #2c3e50; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+h1, h2 { color: #2c3e50; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
 
 
-#testimonials .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
+/* --- Testimonials: متوافق مع تنسيق المدونة --- */
+#testimonials {
+    padding: 40px 20px;
+    background-color: #ffffff; /* يمكن تغيير اللون حسب الرغبة */
 }
 
+/* استخدام نفس كلاس الـ Grid الخاص بالمدونة لضمان التطابق */
+#testimonials .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 بجانب بعض في الموبايل */
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* استخدام نفس كلاس الـ Card الخاص بالمدونة */
+#testimonials .product-card {
+    background: #f9f9f9; /* لون مختلف قليلاً لتمييز الآراء */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* تنسيق النص داخل الآراء */
+#testimonials .product-card p {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+#testimonials .product-card h4 {
+    margin-top: 15px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* التنسيق للشاشات الكبيرة (الديسكتوب) */
+@media (min-width: 768px) {
+    #testimonials .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة في الشاشات الكبيرة */
+        gap: 25px;
+    }
+}
 .product-card {
     background: #fff;
     padding: 20px;
@@ -282,7 +324,7 @@ h1, h2 {
 
 
 
-#shop h2::after, #about h2::after, #testimonials h2::after , #school h2::after {
+#shop h2::after, #about h2::after, #testimonials h2::after , #school h2::after , #blog h2::after {
     content: ""; display: block; width: 60px; height: 3px; background-color: #27ae60; margin: 15px auto;
 }
 
@@ -486,7 +528,7 @@ footer {
 }
 
 @media (max-width: 850px) {
-   .filmstrip-container {
+    .filmstrip-container {
         display: flex;
         flex-wrap: wrap;      /* السماح للصور بالانتقال لصف جديد */
         justify-content: center;
@@ -609,9 +651,7 @@ background-color: rgba(39, 174, 96, 0.5);
 max-width: 768px) {
 
 nav {
-
-
-     flex-direction: row !important; /* תמיד שורה במובייל */
+        flex-direction: row !important; /* תמיד שורה במובייל */
         height: 70px !important;
         padding: 0 10px !important;
     }
@@ -630,7 +670,7 @@ nav {
     .nav-links {
         top: 60px !important; /* התאמה לגובה החדש של ה-Nav */
     }
-
+}
 
 
     .nav-links a { 
@@ -639,8 +679,8 @@ nav {
              font-size:1.0rem;
 
     }
-}
 
+}
 
 /* هذا الأمر يخبر المتصفح أن يترك مسافة 80 بكسل فوق القسم عند الضغط على الرابط */
 
@@ -801,14 +841,13 @@ section {
         display: flex !important;
     }
 .nav-links.active {
-/*background: rgba(44, 62, 80, 0.7) !important;*/
         display: flex !important;
         position: fixed;
         top: 60px;
         left: 0;
         width: 100%;
        /* height: 38vh;*/ /* لتغطية كامل الشاشة عمودياً */
-        background: rgba(44, 62, 80, 0.7); /* إضافة شفافية خفيفة مع بلور */
+        background: rgba(44, 62, 80, 0.95); /* إضافة شفافية خفيفة مع بلور */
        /* backdrop-filter: blur(10px);*/ /* سر العصرية: تأثير الزجاج المضبب */
         flex-direction: column;
         align-items: center; /* توسيط الروابط */
@@ -958,7 +997,12 @@ font-size:24px;
     }
 }
 
-
+/* Hide the desktop social container on mobile to prevent double icons */
+/*@media (max-width: 768px) {
+    .nav-right {
+        display: none !important;
+    }
+}
 
 
 
@@ -986,6 +1030,43 @@ color: #ff6600 !important;
 }
 
 
+
+@media (max-width: 768px) 
+{
+    /* تنسيق حاوية الروابط عندما تكون مفعلة (active) */
+    .nav-links.active {
+        display: flex !important;
+        position: fixed;
+        top: 60px; /* المسافة من الأعلى لتكون أسفل الـ Nav */
+        right: 0;
+        width: 100%; /* يمكن جعلها 100% أو جزء منها */
+        background: #2c3e50;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 1000;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    /* تنسيق الروابط داخل القائمة */
+    .nav-links a {
+
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0; /* زيادة المساحة للضغط بسهولة */
+        font-size: 1.2rem; /* حجم مناسب للموبايل */
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #3e5871; /* فاصل بين الروابط */
+    }
+
+    /* تأثير عند الضغط */
+    .nav-links a:hover {
+        background: #34495e;
+        color: #27ae60;
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -1066,7 +1147,7 @@ img { content-visibility: auto; }
 
 section {
 
-    padding: 0px 20px;
+    padding: 1px 20px;
 
 }
 
@@ -1075,4 +1156,91 @@ section {
 height:420px;
     background-image:url("images/new-hero-mobile.png");
 }
+
+
+#blog {
+    min-height: 500px; /* أو أي ارتفاع مناسب لمحتوى مقال واحد */
+}
+
+/* أضف هذا للـ CSS */
+.blog-transition {
+    transition: opacity 0.4s ease;
+}
+
+/* في الـ JS، بدلاً من display: none استخدم: */
+function openBlog(post) {
+    blogGrid.style.opacity = '0';
+    setTimeout(() => {
+        blogGrid.style.display = 'none';
+        blogViewer.style.display = 'block';
+        blogViewer.style.opacity = '1';
+    }, 400); // الوقت مطابق للـ CSS transition
+}
+
+/* تنسيق قسم المدونة المحدث */
+#blog {
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+}
+
+/* التنسيق الأساسي (للموبايل - 2 بجانب بعض) */
+/* التنسيق الأساسي للموبايل (2 بجانب بعض) */
+#blog-grid {
+    display: grid;
+    /* 4 أعمدة في الديسكتوب، 2 في الموبايل */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* تنسيق بطاقة المقال لتناسب الحجم الجديد */
+#blog .product-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px; /* تقليل الحشوة لتناسب العمودين */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center; /* توسيط النص */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#blog .product-card h3 {
+    font-size: 0.9rem; /* تصغير الخط ليلائم المساحة */
+    margin-bottom: 8px;
+    color: #2c3e50;
+    min-height: 2.4em; /* لضمان تساوي ارتفاع العناوين */
+}
+
+#blog .product-card p {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* إظهار سطرين فقط للنص */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#blog .buy-btn {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+}
+
+
+#blog-grid .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* هذا يضمن أن زر "קרא עוד" يكون دائماً في أسفل البطاقة */
+    height: 100%; /* تمدد البطاقة لتملأ كامل مساحة الخلية */
+}
+/* التنسيق للشاشات الأكبر (أجهزة الكمبيوتر) */
+@media (min-width: 768px) {
+    #blog-grid {
+        grid-template-columns: repeat(2, 2fr); /* اختياري: 4 مقالات بجانب بعض في الكمبيوتر */
+       
+ gap: 20px;
+    }
 }

@@ -107,7 +107,8 @@
         <a href="#shop">מוצרים</a>
         <a href="#school"> גפן</a> 
         <a href="#about">אודות</a>
-        <a href="#testimonials">דעות</a>
+        <a href="#blog">בלוג</a>
+
     </div>
 
     <div class="nav-right">
@@ -221,44 +222,44 @@
     <div class="product-grid" id="testimonials-grid">
         
         <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"הריהוט הגיע בדיוק בזמן, האיכות מדהימה!"</p>
+            <p>"הריהוט הגיע בדיוק בזמן, האיכות מדהימה!"</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- משפחת כהן</strong>
         </div>
         <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"מאוד נאמנים ואדיבים, תודה רבה!"</p>
+            <p>"מאוד נאמנים ואדיבים, תודה רבה!"</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- דליה שוארץ</strong>
         </div>
         <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"העץ איכותי מאוד ומרגיש עמיד!"</p>
+            <p>"העץ איכותי מאוד ומרגיש עמיד!"</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- שרה אברהם</strong>
         </div>
         <div class="product-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"שירות מצוין, הסט נראה מעולה בגינה."</p>
+            <p>"שירות מצוין, הסט נראה מעולה בגינה."</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- דני לוי</strong>
         </div>
 
         <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"עיצוב מרהיב, מרגישים את ההשקעה בכל פרט ופרט."</p>
+            <p>"עיצוב מרהיב, מרגישים את ההשקעה בכל פרט ופרט."</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- יוסי מזרחי</strong>
         </div>
         <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"שירות אדיב וסבלני, בהחלט נחזור שוב!"</p>
+            <p>"שירות אדיב וסבלני, בהחלט נחזור שוב!"</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- משפחת אבו-סאלח</strong>
         </div>
         <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"הגינה שלנו קיבלה חיים חדשים בזכות הרהיטים שלכם."</p>
+            <p>"הגינה שלנו קיבלה חיים חדשים בזכות הרהיטים שלכם."</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- עינת כהן</strong>
         </div>
         <div class="product-card hidden-card">
-            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
-            <p>"שירות מעל ומעבר, בהחלט אומן בנשמה."</p>
+            <p>"שירות מעל ומעבר, בהחלט אומן בנשמה."</p>            <div style="color: #f1c40f; margin-bottom: 10px;">★★★★★</div>
+
             <strong>- משפחת לוי</strong>
         </div>
     </div>
@@ -267,6 +268,125 @@
         <button id="toggleBtn" onclick="toggleTestimonials()" class="buy-btn">הצג עוד</button>
     </div>
 </section>
+
+
+
+<section id="blog">
+    <h2>הבלוג שלנו</h2>
+    <div class="product-grid" id="blog-grid"></div>
+    
+    <div style="text-align: center; margin-top: 30px;">
+        <button id="toggle-blog-btn" class="buy-btn" onclick="toggleBlogs()">הצג עוד...</button>
+    </div>
+    
+    <div id="blog-viewer" style="display:none; max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <button onclick="closeBlog()" style="float:left; cursor:pointer; background:none; border:none; font-size: 1.2rem;">&times; סגור</button>
+        <div id="blog-full-content" style="padding-top: 20px;"></div>
+    </div>
+</section>
+
+
+<script>
+const blogPosts = [
+  { 
+    title: "טיפים לתחזוקת רהיטי עץ", 
+    excerpt: "איך לשמור על העץ בחוץ לאורך שנים...", 
+    content: "כדי לשמור על עץ בגינה, חשוב לבצע שימון תקופתי, לנקות אבק ולהימנע מרטיבות ישירה. טיפול נכון יאריך את חיי הרהיט משמעותית." 
+  },
+  { 
+    title: "למה לבחור עץ מלא?", 
+    excerpt: "יתרונות העץ המלא בעיצוב הבית והגינה.", 
+    content: "עץ מלא הוא חומר טבעי, נושם ובעל מראה ייחודי. כל פריט עץ הוא יצירה בפני עצמה, מה שמעניק לבית חמימות ייחודית." 
+  },
+  { 
+    title: "עיצוב גינה חלומית", 
+    excerpt: "איך להתאים את הריהוט למרחב הקיים?", 
+    content: "סוד הקסם בגינה הוא שילוב נכון בין פונקציונליות לאסתטיקה. התחילו בתכנון פינות ישיבה מוגדרות והוסיפו עץ מלא שמשתלב עם הצמחייה הטבעית." 
+  },
+  { 
+    title: "בטיחות ונגרות עם ילדים", 
+    excerpt: " ערך המוסף בסדנאות העץ שלנו ממוקד לעניין", 
+    content: "בתוכנית 'קוד גפן', אנו מלמדים ילדים לעבוד עם הידיים. העבודה עם כלי עבודה אמיתיים תחת השגחה מפתחת ביטחון עצמי, קואורדינציה ויצירתיות שאין להם תחליף." 
+  },
+  { 
+    title: "ההבדל בין עץ אורן לעץ אלון", 
+    excerpt: "איזה סוג עץ מתאים לפרויקט שלכם?", 
+    content: "בחירת סוג העץ משפיעה על העמידות והמראה. האורן רך ונוח לעבודה, בעוד האלון נחשב לעץ קשה, עמיד במיוחד ויוקרתי יותר." 
+  },
+  { 
+    title: "טרנדים בעיצוב ריהוט גן ל-2026", 
+    excerpt: "מה נראה השנה בחצרות הכי יפות?", 
+    content: "השנה אנחנו רואים חזרה לחומרים טבעיים ועיצובים מינימליסטיים שמשלבים נוחות מקסימלית עם עמידות לתנאי חוץ." 
+  },
+  { 
+    title: "לתכנן פינת ישיבה קטנה", 
+    excerpt: "גם במרפסת קטנה אפשר ליהנות מנגרות איכותית.", 
+    content: "תכנון נכון מאפשר להפיק את המירב מכל סנטימטר. רהיטים מתקפלים או משולבי אחסון הם הפתרון המושלם למרפסות עירוניות." 
+  },
+  { 
+    title: "סודות הגימור המושלם", 
+    excerpt: "איך להגיע למראה מקצועי? סוד שלא מספרים", 
+    content: "הגימור הוא השלב הכי חשוב. שיוף נכון בשלבים ושימוש בחומרי איטום איכותיים הם מה שעושה את ההבדל בין רהיט ביתי לרהיט ברמה של אומן." 
+  }
+];
+const blogGrid = document.getElementById('blog-grid');
+const blogViewer = document.getElementById('blog-viewer');
+const blogFullContent = document.getElementById('blog-full-content');
+const toggleBtn = document.getElementById('toggle-blog-btn'); // تأكد من مطابقة الـ ID في الـ HTML
+let isExpanded = false;
+
+function renderBlogs(limit) {
+    blogGrid.innerHTML = '';
+    blogPosts.slice(0, limit).forEach(post => {
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+            <button class="buy-btn">קרא עוד</button>
+        `;
+        card.querySelector('.buy-btn').onclick = () => openBlog(post);
+        blogGrid.appendChild(card);
+    });
+}
+
+function openBlog(post) {
+    // إخفاء العناصر بأسلوب ناعم
+    blogGrid.style.display = 'none';
+    if(toggleBtn) toggleBtn.style.display = 'none';
+    
+    blogViewer.style.display = 'block';
+    blogFullContent.innerHTML = `
+        <h2 style="color: #2c3e50;">${post.title}</h2>
+        <p style="color: #333; line-height: 1.8; font-size: 1.1rem;">${post.content}</p>
+        <button class="buy-btn" onclick="closeBlog()">חזור לבלוג</button>
+    `;
+
+    // تمرير ناعم للبداية دون "قفزة"
+    document.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeBlog() {
+    blogViewer.style.display = 'none';
+    blogGrid.style.display = 'grid';
+    if(toggleBtn) toggleBtn.style.display = 'inline-block';
+    
+    document.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleBlogs() {
+    isExpanded = !isExpanded;
+    renderBlogs(isExpanded ? blogPosts.length : 4);
+    toggleBtn.innerText = isExpanded ? "הצג פחות" : "הצג עוד...";
+    
+    if(!isExpanded) {
+        document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// البدء
+renderBlogs(4);
+</script>
 
 </main>
 
@@ -516,20 +636,7 @@ function toggleTestimonials() {
     // שינוי טקסט הכפתור
     btn.innerText = isHidden ? 'הצג פחות' : 'הצג עוד';
 }
-document.addEventListener('click', function(e){
 
-    const menu = document.getElementById('navLinks');
-    const toggle = document.querySelector('.menu-toggle');
-
-    if(
-        menu.classList.contains('active') &&
-        !menu.contains(e.target) &&
-        !toggle.contains(e.target)
-    ){
-        menu.classList.remove('active');
-    }
-
-});
 </script>
 <div class="social-side-bar">
     <a href="https://wa.me/972503690284" class="social-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
