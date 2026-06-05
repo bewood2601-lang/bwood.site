@@ -17,6 +17,74 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+
+<style>
+/* الحاوية الجانبية للأزرار */
+.social-side-bar {
+    position: fixed;
+    top: 60%;
+    right: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* لون الأيقونات الافتراضي */
+      font-size: 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ألوان الأزرار */
+.whatsapp { background-color: rgba(37, 211, 102, 0.5); }
+.facebook { background-color: rgba(66, 103, 178, 0.5); }
+.instagram { background-color: rgba(225, 48, 108, 0.5); }
+.email { background-color:rgba(192, 57, 43, 0.5); }
+
+
+
+
+/* تأثير عند مرور الفأرة العام (التكبير) */
+.social-btn:hover {
+    transform: scale(1.15);
+}
+
+/* إزالة الشفافية عند المرور لكل زر على حدة */
+.whatsapp:hover { background-color: rgba(37, 211, 102, 1.0) !important; }
+.facebook:hover { background-color: rgba(66, 103, 178, 1.0) !important; }
+.instagram:hover { background-color: rgba(225, 48, 108, 1.0) !important; }
+.email:hover { background-color: rgba(192, 57, 43, 1.0) !important; }
+
+
+/* تعديل للموبايل */
+@media (max-width: 768px) {
+    .social-side-bar {
+        right: 10px;
+        gap: 8px;
+    }
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+</style>
+
+
+
 </head>
 <body>
 
@@ -73,7 +141,10 @@
 
 <main>
   <section id="home" class="hero">
-    <h1 class="glow-text">בהא אומנות בעץ</h1>
+   <div class="hero-content">
+    <h1 class="hero-text-glow">בהא אומנות בעץ</h1>
+    <p class="hero-text-glow">איכות עמידה, מחיר הוגן.</p>
+</div>
 </section>
 
     <section id="shop">
@@ -447,6 +518,10 @@ function toggleTestimonials() {
 }
 
 </script>
-
-</body>
+<div class="social-side-bar">
+    <a href="https://wa.me/972503690284" class="social-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/Bwoodwork" class="social-btn facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/be.woodart/" class="social-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:contact@bewood.co.il" class="social-btn email"><i class="fas fa-envelope"></i></a>
+</div></body>
 </html>

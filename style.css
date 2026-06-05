@@ -168,7 +168,9 @@ section { padding: 40px 0; text-align: center; }
     border-radius: 15px;
     margin-bottom: 40px;
     position: relative; /* ضروري لتأثيرات النص */
-}.hero:hover {
+}
+
+.hero:hover {
 
     transform: scale(1);
 
@@ -183,12 +185,25 @@ section { padding: 40px 0; text-align: center; }
     text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #d35400;
     padding: 20px;
     /*border: 3px solid rgba(255, 255, 255, 0.3);*/
-    border-radius: 15px;
+   /* border-radius: 15px;*/
     /*background: rgba(0, 0, 0, 0.2);*/
-    backdrop-filter: blur(2px);
+  /*  backdrop-filter: blur(2px);*/
 }
-.hero h2 { color: #ecf0f1; font-size: 1.5rem; }
-
+.hero p {
+margin-top:-55px;
+    font-size:1.1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #d35400;
+    padding: 20px;
+    /*border: 3px solid rgba(255, 255, 255, 0.3);*/
+  /*  border-radius: 15px;*/
+    /*background: rgba(0, 0, 0, 0.2);*/
+    /*backdrop-filter: blur(2px);*/
+ }
+.hero-content {
+margin-top:300px;
+/*padding :5px;*/
+}
 
 
 /* ריווח כללי לכל האזורים */
@@ -559,8 +574,7 @@ footer {
 
     border: none;
 
-    background-color: #27ae60;
-
+background-color: rgba(39, 174, 96, 0.5);
     color: white;
 
     cursor: pointer;
@@ -1104,5 +1118,3 @@ height:420px;
     background-image:url("images/new-hero-mobile.png");
 }
 
-
-ب
