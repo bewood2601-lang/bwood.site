@@ -1147,7 +1147,7 @@ img { content-visibility: auto; }
 
 section {
 
-    padding: 1px 20px;
+    padding: 20px 20px;
 
 }
 
@@ -1244,3 +1244,12 @@ function openBlog(post) {
  gap: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
