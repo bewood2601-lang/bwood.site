@@ -667,6 +667,22 @@ function toggleTestimonials() {
 }
 
 </script>
+
+
+<script>
+// إغلاق القائمة عند الضغط في أي مكان خارجها
+document.addEventListener('click', function(event) {
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    // التحقق مما إذا كان الضغط خارج القائمة وخارج زر التفعيل
+    if (navLinks.classList.contains('active')) {
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navLinks.classList.remove('active');
+        }
+    }
+});
+</script>
 <div class="social-side-bar">
     <a href="https://wa.me/972503690284" class="social-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://www.facebook.com/Bwoodwork" class="social-btn facebook" target="_blank"><i class="fab fa-facebook"></i></a>
